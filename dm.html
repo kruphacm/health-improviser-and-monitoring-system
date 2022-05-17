@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<!-- script and stylsheet attachment  --> 
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+  <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/vendors/easings.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/vendors/scrolloverflow.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.js"></script>
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+  <!--Title-->
+  <title>DIABETES MELLITUS</title>
+</head>
+<!--Style sheet-->
+<style>
+/*BODY Style*/
+@media screen and (min-width: 700px) {
+  body 
+  {
+    font-size: 20px;
+  }
+  div .l1 a img {
+    width:100px;
+    height:100px;
+  }
+}
+@media screen and (max-width: 700px) {
+  body 
+  {
+    font-size: 12px;
+  }
+  #contact
+  {
+    font-size: 10px;
+  }
+  div .l1 a img{
+    width:50px;
+    height:50px;
+  }
+}
+body
+{
+  background-color: rgba(240,240,240);
+  display:inherit;
+  overflow-x: hidden;
+  margin: 0px;
+}
+
+/*LOGO AND NAVBAR STYLE*/
+.navbar,.navbar1,.desc
+  {
+  overflow: hidden;
+  }
+.navbar a 
+  {
+  float: left;
+  font-size: 16px;
+  color: rgb(30,144,255);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }
+.cropped1
+  {
+  padding-left: 2%;
+  vertical-align: middle;
+  font-size: 150%;
+  }
+.navbar
+  {
+  background-image: url('https://image.freepik.com/free-photo/shades-blue-white-background_23-2147746645.jpg');
+  background-color: rgba(0,0,0, 0.3);
+  background-blend-mode: darken;
+  color: white;
+  font-size: 100%;
+  font-style: italic;
+  font-family:cursive;
+  padding-left: 2%;
+  resize: both;
+  overflow: auto;
+  }
+div.scrollmenu 
+  {
+  padding-top: 1%;
+  overflow: auto;
+  white-space: nowrap;
+  }
+div.scrollmenu a 
+  {
+  display: inline-block;
+  color: rgb(30,144,255);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  }
+  div.scrollmenu a:hover 
+  {
+  background-color: rgb(30,144,255);
+  color: white;
+  }
+.scrollmenu 
+  {
+  background-color: #eee;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll; 
+  }
+.mySlides
+  {
+  display: none;
+  }
+  /*onloader style*/
+.container 
+  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  }
+.item 
+  {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  list-style-type: none;
+  transition: 0.5s all ease;
+  }
+.item:nth-child(1) 
+{
+  animation: right-1 1s infinite alternate;
+  background-color: #49b8e5;
+  animation-delay: 100ms;
+}
+@keyframes right-1 {
+  0% {
+      transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(60px);
+  }
+}
+.item:nth-child(2) {
+  animation: right-2 1s infinite alternate;
+  background-color: #1e98d4;
+  animation-delay: 200ms;
+}
+@keyframes right-2 {
+  0% {
+      transform: translateY(-70px);
+  }
+  100% {
+    transform: translateY(70px);
+  }
+}
+.item:nth-child(3) {
+  animation: right-3 1s infinite alternate;
+  background-color: #2a92d0;
+  animation-delay: 300ms;
+}
+@keyframes right-3 {
+  0% {
+      transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(80px);
+  }
+}
+.item:nth-child(4) {
+  animation: right-4 1s infinite alternate;
+  background-color: #3a88c8;
+  animation-delay: 400ms;
+}
+@keyframes right-4 {
+  0% {
+      transform: translateY(-90px);
+  }
+  100% {
+    transform: translateY(90px);
+  }
+}
+.item:nth-child(5) {
+  animation: right-5 1s infinite alternate;
+  background-color: #507cbe;
+  animation-delay: 500ms;
+}
+@keyframes right-5 {
+  0% {
+      transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+/*fade left animation*/
+.reveal{
+  position: relative;
+  transform: translate(-150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+/*fade right animation*/
+.reveal1{
+  position: relative;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal1.active1{
+  transform: translateX(0);
+  opacity: 1;
+}
+/*fade top animation*/
+.reveal2{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal2.active2{
+  transform: translateY(0);
+  opacity: 1;
+}
+</style>
+  <script>
+  /* onloader function*/
+   $(window).on('load', function () {  
+           $(".container").fadeOut("slow");  
+      }); 
+  /*fade left animation*/    
+     function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }}
+window.addEventListener("scroll", reveal);
+/*fade right animation*/
+function reveal1() {
+var reveals1 = document.querySelectorAll(".reveal1");
+  for (var i = 0; i < reveals1.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals1[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals1[i].classList.add("active1");
+    } else {
+      reveals1[i].classList.remove("active1");
+    }
+  }}
+  window.addEventListener("scroll", reveal1);
+  /*fade top animation*/
+  function reveal2() {
+var reveals2 = document.querySelectorAll(".reveal2");
+  for (var i = 0; i < reveals2.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals2[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals2[i].classList.add("active2");
+    } else {
+      reveals2[i].classList.remove("active2");
+    }
+  }}
+  window.addEventListener("scroll", reveal2);
+
+</script>
+
+<body>
+  <!--LOADER CONTENT-->
+  <div class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+  <!--LOGO AND WEBSITE NAME-->
+  <div class='navbar' id='title' >
+    <p ><img class="cropped1" src="https://drive.google.com/thumbnail?id=1JQ6epr36ugrVF7cuTlYMw9kL7J-pZrfd" width=45px height=40px>&nbsp HEALTH COMPANION</p>
+  </div>
+  <!--NAVIGATION BAR-->
+  <div class="scrollmenu">
+    <a href="index.html" >HOME</a>
+    <a href='/health-improviser-and-monitoring-system/Consulting%20doctors.html' >CONSULTING</a>
+    <a href='http://127.0.0.1:5000/' >CHECK MY HEALTH</a>
+    <a href="/health-improviser-and-monitoring-system/AI%20predictions.html" >AI PREDICTIONS</a>
+    <a href="/health-improviser-and-monitoring-system/Hospital.html">HOSPITAL CONSULTING</a>      
+    <a href="/health-improviser-and-monitoring-system/HealthyTips.html">HEALTH TIPS</a>
+    <a href="/health-improviser-and-monitoring-system/food1-1.html">FOOD INFO</a>
+    <a href="/health-improviser-and-monitoring-system/Disease%20information.html">DISEASE INFO</a>
+  </div>
+  <br><br>
+ <div style="color: white; ">
+<div class="navbar1" style="align-self:  center; color: white; font-display:auto; padding: 5%; background-color: #175181;">
+    <div class="split left" style="float:left;width: 45%;">
+    
+      
+       
+       <img class="gify" src="https://drive.google.com/thumbnail?id=1k3QoyIWEL8h-ZcQb2gRplTQLN4uZLDsd" width="350" height="300" >   
+   
+
+
+</div>
+<div class="split right" style="float:right;width: 55%;">
+     <br>
+    <p style="padding-left: 1%; "><h2>DIABETES MELLITUS</h2></p>
+        <p style="padding-left: 1%; ">"Life is not over because you have diabetes.Make the most of what you have, be greateful."</p><br><br><br><br>
+</div>
+</div>    
+<br>
+<div class="reveal2" style="color: white;  padding-left:5%;background-color: #175181;"><br><br>
+<h2 class="reveal"><b>ABOUT:</b></h2>
+<ul class="reveal">
+<li class="reveal">Diabetes mellitus is a group of metabolic diseases in which the person has high blood glucose (blood sugar) level either due to inadequate insulin production or because the body's cells do not respond properly to insulin or both. </li>
+<li class="reveal">The term "Diabetes Mellitus" describes a metabolic disorder of multiple etiology characterized by chronic hyperglycemia with disturbances of carbohydrate, fat (dyslipidaemia) and protein metabolism resulting from defects in insulin secretion, insulin action, or both. </li>
+<li class="reveal">The main types of diabetes are:</li>
+<li class="reveal">Type 1 diabetes: It is due to the body's malfunction to produce insulin in the body, and requires the person to inject insulin. This form was previously referred to as "Insulin-Dependent Diabetes Mellitus" (IDDM) or "Juvenile Diabetes".</li>
+<li class="reveal">Type 2 diabetes: It is due to insulin resistance, a condition in which cells fail to use insulin properly, sometimes combined with an absolute insulin deficiency. This form was previously referred to as non insulin-dependent diabetes mellitus (NIDDM) or "adult-onset diabetes".It can be prevented after following healthy life style such as healthy diet, proper exercise or maintaining healthy weight.</li>
+<li class="reveal">The third main form, Gestational diabetes occurs when pregnant women without a previous diagnosis of diabetes develop a high blood glucose level. It may lead to type 2 DM.</li>
+<li class="reveal">Other types of diabetes include those caused by:</li>
+<li class="reveal">Genetic defects of the beta cells, (the part of the pancreas that makes insulin) such as maturity-onset diabetes of the young (MODY) or neonatal diabetes mellitus (NDM)</li>
+<li class="reveal">Diseases of the pancreas or conditions that damage the pancreas, such as pancreatitis and cystic fibrosis</li>
+<li class="reveal">Excess amounts of certain hormones resulting from some medical conditions such as cortisol in Cushing’s syndrome that work against the action of insulin</li>
+<li class="reveal">Medications that reduce insulin action, such as glucocorticoids, or chemicals that destroy beta cells</li>
+</ul>
+    <IMG class="floatRight reveal"SRC="https://i.makeagif.com/media/12-08-2016/PUfd3a.gif" width="400" height="250" ></IMG>
+<h2 class="reveal1"><b>SYMPTOMS:</b></h2>
+<ul class="reveal1">
+<li class="reveal1">Polyuria: urinating frequently (particularly at night)</li>
+<li class="reveal1">Polydipsia: feeling very thirsty</li>
+<li class="reveal1">Polyphagia: feeling hungry frequently</li>
+<li class="reveal1">Weakness</li>
+<li class="reveal1">Weight loss and loss of muscle bulk</li>
+<li class="reveal1">Frequent episodes of thrush</li>
+<li class="reveal1">Cuts or wounds that heal slowly</li>
+<li class="reveal1">Blurred vision
+</ul>
+<h2 class="reveal"><b>TREATMENT:</b></h2>
+<li class="reveal">Currently, six classes of oral antidiabetic drugs (OADs) are available: </li>
+<ol class="reveal">
+<li class="reveal">biguanides (e.g., metformin)</li>
+<li class="reveal">sulfonylureas (e.g., glimepiride)</li>
+<li class="reveal"> meglitinides (e.g., repaglinide)</li>
+<li class="reveal">thiazolidinediones (e.g., pioglitazone)</li>
+<li class="reveal">dipeptidyl peptidase IV inhibitors (e.g., sitagliptin)</li>
+<li class="reveal">and α-glucosidase inhibitors (e.g., acarbose).</li>
+</ol>
+<li class="reveal">Medications:</li>
+<ol class="reveal">
+<li class="reveal">Insulin: Type 1 diabetes is generally treated with combinations of regular and NPH (neutral protamine Hagedorn) insulin or synthetic insulin analogs.</li> 
+<li class="reveal">When insulin is used in type 2 diabetes, a long-acting formulation is usually added initially while continuing oral medications.</li>
+<li class="reveal">Treatment of coexisting medical conditions (high blood pressure, dyslipidemia etc.)</li>
+</ol>
+<li class="reveal1">Lifestyle measures</li>
+<ol class="reveal1">
+<li class="reveal1">Regular exercise</li>
+<li class="reveal1">Proper diet</li>
+<li class="reveal1">No smoking</li>
+<li class="reveal1">No alcohol</li>
+</ol><br><br>
+    </div>
+    <br><br>
+ <!--CONTACT AND LINKS SECTION-->
+ <div  id="contact" style="background-image: url('https://image.freepik.com/free-photo/shades-blue-white-background_23-2147746645.jpg');background-color: rgba(0,0,0, 0.59);background-blend-mode: darken;color: white;font-size:auto;"><br>
+  <table style="width: auto;padding-left: 5%;vertical-align: top;width:100%;">
+    <tr>  
+      <td >
+        <p >Contact<br>Mobile:1234567891<br>Email:abcd123@gmail.com</p>
+        <p >Follow us on</p><img src="https://www.beachrealtync.com/sites/default/files/uploads/socials_3.png" width=100px  ><br><br>
+      </td>
+      <td>
+        <p style="margin:0%;">USEFUL LINKS</p>
+        <hr style="color: white;width: 50%;float: left;margin:0%;">
+        <ul style="text-decoration:none;text-decoration-style: none;">
+          <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/HealthyTips.html" style="text-decoration:none;color: white;">diet plan</a></li>
+          <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/food1-1.html" style="text-decoration:none;color: white;">food tips</a></li>
+          <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/Disease%20information.html" style="text-decoration:none;color: white;">know about disease</a></li>
+          <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/Hospital.html" style="text-decoration:none;color: white;">famous hospital</a></li>
+        </ul>  
+      </td>
+      <td>
+        <p style="margin:0%;">OFFICIAL WEBSITES</p>
+        <hr style="color: white;width: 50%;float: left;margin:0%;">
+        <ul style="text-decoration:none;text-decoration-style: none;">
+          <li><a href="https://medlineplus.gov/encyclopedia.html" style="text-decoration:none;color: white;">DISEASE ENCYCLOPEDIA</a></li>
+          <li><a href="https://www.nal.usda.gov/legacy/fnic/food-dictionaries-and-encyclopedias" style="text-decoration:none;color: white;">FOOD ENCYCLOPEDIA</a></li>
+        </ul> 
+        <br><br> 
+      </td>
+    </tr>      
+    </table>
+    <br>
+</div>
+<!--OWNERS RIGHT-->
+<div style="padding:0.2%;background-color:white;font-size: 100%; ">
+  <p style="text-align: center;color: #507cbe">managed by admins of this website</p>
+</div>
+</body>
+</html>

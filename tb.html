@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<!-- script and stylsheet attachment  --> 
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+  <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/vendors/easings.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/vendors/scrolloverflow.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.js"></script>
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+  <!--Title-->
+  <title>TUBERCULOSIS</title>
+</head>
+<!--Style sheet-->
+<style>
+/*BODY Style*/
+@media screen and (min-width: 700px) {
+  body 
+  {
+    font-size: 20px;
+  }
+  div .l1 a img {
+    width:100px;
+    height:100px;
+  }
+}
+@media screen and (max-width: 700px) {
+  body 
+  {
+    font-size: 12px;
+  }
+  #contact
+  {
+    font-size: 10px;
+  }
+  div .l1 a img{
+    width:50px;
+    height:50px;
+  }
+}
+body
+{
+  background-color: rgba(240,240,240);
+  display:inherit;
+  overflow-x: hidden;
+  margin: 0px;
+}
+
+/*LOGO AND NAVBAR STYLE*/
+.navbar,.navbar1,.desc
+  {
+  overflow: hidden;
+  }
+.navbar a 
+  {
+  float: left;
+  font-size: 16px;
+  color: rgb(30,144,255);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }
+.cropped1
+  {
+  padding-left: 2%;
+  vertical-align: middle;
+  font-size: 150%;
+  }
+.navbar
+  {
+  background-image: url('https://image.freepik.com/free-photo/shades-blue-white-background_23-2147746645.jpg');
+  background-color: rgba(0,0,0, 0.3);
+  background-blend-mode: darken;
+  color: white;
+  font-size: 100%;
+  font-style: italic;
+  font-family:cursive;
+  padding-left: 2%;
+  resize: both;
+  overflow: auto;
+  }
+div.scrollmenu 
+  {
+  padding-top: 1%;
+  overflow: auto;
+  white-space: nowrap;
+  }
+div.scrollmenu a 
+  {
+  display: inline-block;
+  color: rgb(30,144,255);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  }
+  div.scrollmenu a:hover 
+  {
+  background-color: rgb(30,144,255);
+  color: white;
+  }
+.scrollmenu 
+  {
+  background-color: #eee;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll; 
+  }
+.mySlides
+  {
+  display: none;
+  }
+  /*onloader style*/
+.container 
+  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  }
+.item 
+  {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  list-style-type: none;
+  transition: 0.5s all ease;
+  }
+.item:nth-child(1) 
+{
+  animation: right-1 1s infinite alternate;
+  background-color: #49b8e5;
+  animation-delay: 100ms;
+}
+@keyframes right-1 {
+  0% {
+      transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(60px);
+  }
+}
+.item:nth-child(2) {
+  animation: right-2 1s infinite alternate;
+  background-color: #1e98d4;
+  animation-delay: 200ms;
+}
+@keyframes right-2 {
+  0% {
+      transform: translateY(-70px);
+  }
+  100% {
+    transform: translateY(70px);
+  }
+}
+.item:nth-child(3) {
+  animation: right-3 1s infinite alternate;
+  background-color: #2a92d0;
+  animation-delay: 300ms;
+}
+@keyframes right-3 {
+  0% {
+      transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(80px);
+  }
+}
+.item:nth-child(4) {
+  animation: right-4 1s infinite alternate;
+  background-color: #3a88c8;
+  animation-delay: 400ms;
+}
+@keyframes right-4 {
+  0% {
+      transform: translateY(-90px);
+  }
+  100% {
+    transform: translateY(90px);
+  }
+}
+.item:nth-child(5) {
+  animation: right-5 1s infinite alternate;
+  background-color: #507cbe;
+  animation-delay: 500ms;
+}
+@keyframes right-5 {
+  0% {
+      transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}/*fade left animation*/
+.reveal{
+  position: relative;
+  transform: translate(-150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+/*fade right animation*/
+.reveal1{
+  position: relative;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal1.active1{
+  transform: translateX(0);
+  opacity: 1;
+}
+/*fade top animation*/
+.reveal2{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal2.active2{
+  transform: translateY(0);
+  opacity: 1;
+}
+</style>
+  <script>
+  /* onloader function*/
+   $(window).on('load', function () {  
+           $(".container").fadeOut("slow");  
+      }); 
+  /*fade left animation*/    
+     function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }}
+window.addEventListener("scroll", reveal);
+/*fade right animation*/
+function reveal1() {
+var reveals1 = document.querySelectorAll(".reveal1");
+  for (var i = 0; i < reveals1.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals1[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals1[i].classList.add("active1");
+    } else {
+      reveals1[i].classList.remove("active1");
+    }
+  }}
+  window.addEventListener("scroll", reveal1);
+  /*fade top animation*/
+  function reveal2() {
+var reveals2 = document.querySelectorAll(".reveal2");
+  for (var i = 0; i < reveals2.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals2[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals2[i].classList.add("active2");
+    } else {
+      reveals2[i].classList.remove("active2");
+    }
+  }}
+  window.addEventListener("scroll", reveal2);
+
+</script>
+
+<body>
+  <!--LOADER CONTENT-->
+  <div class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+  <!--LOGO AND WEBSITE NAME-->
+  <div class='navbar' id='title' >
+    <p ><img class="cropped1" src="https://drive.google.com/thumbnail?id=1JQ6epr36ugrVF7cuTlYMw9kL7J-pZrfd" width=45px height=40px>&nbsp HEALTH COMPANION</p>
+  </div>
+  <!--NAVIGATION BAR-->
+  <div class="scrollmenu">
+    <a href="index.html" >HOME</a>
+    <a href='/health-improviser-and-monitoring-system/Consulting%20doctors.html' >CONSULTING</a>
+    <a href='http://127.0.0.1:5000/' >CHECK MY HEALTH</a>
+    <a href="/health-improviser-and-monitoring-system/AI%20predictions.html" >AI PREDICTIONS</a>
+    <a href="/health-improviser-and-monitoring-system/Hospital.html">HOSPITAL CONSULTING</a>      
+    <a href="/health-improviser-and-monitoring-system/HealthyTips.html">HEALTH TIPS</a>
+    <a href="/health-improviser-and-monitoring-system/food1-1.html">FOOD INFO</a>
+    <a href="/health-improviser-and-monitoring-system/Disease%20information.html">DISEASE INFO</a>
+  </div>
+  <br><br>
+ <div style="color: white; ">
+<div class="navbar1" style="align-self:  center; color: white; font-display:auto; padding: 5%; background-color: #175181;">
+    <div class="split left" style="float:left;width: 45%;">
+    
+      
+       
+       <img class="gify" src="https://drive.google.com/thumbnail?id=17i4R0i9w2SBbWnvtqY6Tk2wWWqMn6S-H" width="350" height="300" >   
+   
+
+
+</div>
+<div class="split right" style="float:right;width: 55%;">
+     <br>
+    <p style="padding-left: 1%; "><h2>TUBERCULOSIS</h2></p>
+        <p style="padding-left: 1%; ">“Hope is being able to see that there is a light despite all of the darkness.”</p><br><br><br><br>
+</div>
+</div>    
+<br>
+<div class="reveal2" style="color: white;padding-left:5%;background-color: #175181"><br><br>
+<h2 class="reveal"><b>ABOUT:</b></h2>
+<ul class="reveal">
+<li class="reveal">Tuberculosis (TB) is an infectious disease caused by Mycobacterium tuberculosis. </li>
+<li class="reveal"> Tuberculosis commonly affects the lungs, but can also affect other parts of the body. </li>
+<li class="reveal">It  spreads from person to person through the air, when people who are infected with TB infection cough, sneeze or otherwise transmit respiratory fluids through the air. </li>
+<li class="reveal">It is a disease that can be cured with proper treatment. India accounts for one fourth of the global TB burden.</li> 
+<li class="reveal">In 2015, an estimated 28 lakh cases occurred and 4.8 lakh people died due to TB.  </li>
+</ul>
+<IMG class="floatRight reveal"SRC="https://biodesign.asu.edu/sites/default/files/documents/tbanim2.gif" width="325" height="250" ></IMG>
+<h2 class="reveal1"><b>SYMPTOMS:</b></h2>
+<li class="reveal1">Tuberculosis most commonly affects the lungs. Common symptoms of active lung TB are:</li>
+<ol class="reveal1">
+<li class="reveal1">A persistent cough of more than two weeks that brings up phlegm and blood at times</li>
+<li class="reveal1">Breathlessness, which is usually mild to begin with and gradually gets worse</li>
+<li class="reveal1">Lack of appetite and weight loss</li>
+<li class="reveal1">A high temperature of 38ºC (100.4ºF) or above</li>
+<li class="reveal1">Extreme tiredness or fatigue</li>
+<li class="reveal1">Night sweats</li>
+<li class="reveal1">Chest pains</li>
+</ol>
+<li class="reveal1">Less commonly TB infection can occure in other organs of the body like Lymph nodes,bones and joints, digestive system, nervous system, bladder and reproductive system. This is known as extra pulmonary TB. Symptoms of extra pulmonary TB vary according to organ/system affected. </li>
+<li class="reveal1">Extra pulmonary TB is more common in people with a weakened immune system, such as those with HIV.that heal slowly</li>
+<h2 class="reveal"><b>TREATMENT:</b></h2>
+<li class="reveal">Air borne infection control measures</li>
+<li class="reveal">For all HIV infected children who either had a known exposure to an infectious TB case or are Tuberculin skin test (TST) positive (>=5mm induration) but have no active TB disease.</li>
+<li class="reveal">All TST positive children who are receiving immunosuppressive therapy (e.g. Children with nephrotic syndrome, acute leukemia, etc.).</li>
+<li class="reveal">A child born to mother who was diagnosed to have TB in pregnancy will receive prophylaxis for 6 months, provided congenital TB has been ruled out. BCG vaccination can be given at birth even if INH preventive therapy is planned.</li>
+<li  class="reveal">Contact tracing</li>
+ <li class="reveal">Isoniazid preventive therapy</li>
+    <li class="reveal">BCG vaccination</li><br><br></div>
+    <br><br>
+<!--CONTACT AND LINKS SECTION-->
+<div  id="contact" style="background-image: url('https://image.freepik.com/free-photo/shades-blue-white-background_23-2147746645.jpg');background-color: rgba(0,0,0, 0.59);background-blend-mode: darken;color: white;font-size:auto;"><br>
+  <table style="width: auto;padding-left: 5%;vertical-align: top;width:100%;">
+    <tr>  
+      <td >
+        <p >Contact<br>Mobile:1234567891<br>Email:abcd123@gmail.com</p>
+        <p >Follow us on</p><img src="https://www.beachrealtync.com/sites/default/files/uploads/socials_3.png" width=100px  ><br><br>
+      </td>
+      <td>
+        <p style="margin:0%;">USEFUL LINKS</p>
+        <hr style="color: white;width: 50%;float: left;margin:0%;">
+        <ul style="text-decoration:none;text-decoration-style: none;">
+          <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/HealthyTips.html" style="text-decoration:none;color: white;">diet plan</a></li>
+          <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/food1-1.html" style="text-decoration:none;color: white;">food tips</a></li>
+          <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/Disease%20information.html" style="text-decoration:none;color: white;">know about disease</a></li>
+          <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/Hospital.html" style="text-decoration:none;color: white;">famous hospital</a></li>
+        </ul>  
+      </td>
+      <td>
+        <p style="margin:0%;">OFFICIAL WEBSITES</p>
+        <hr style="color: white;width: 50%;float: left;margin:0%;">
+        <ul style="text-decoration:none;text-decoration-style: none;">
+          <li><a href="https://medlineplus.gov/encyclopedia.html" style="text-decoration:none;color: white;">DISEASE ENCYCLOPEDIA</a></li>
+          <li><a href="https://www.nal.usda.gov/legacy/fnic/food-dictionaries-and-encyclopedias" style="text-decoration:none;color: white;">FOOD ENCYCLOPEDIA</a></li>
+        </ul> 
+        <br><br> 
+      </td>
+    </tr>      
+    </table>
+    <br>
+</div>
+<!--OWNERS RIGHT-->
+<div style="padding:0.2%;background-color:white;font-size: 100%; ">
+  <p style="text-align: center;color: #507cbe">managed by admins of this website</p>
+</div>
+</body>
+</html>

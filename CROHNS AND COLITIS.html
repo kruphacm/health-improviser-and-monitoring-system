@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<!-- script and stylsheet attachment  --> 
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/vendors/easings.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/vendors/scrolloverflow.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.js"></script>
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+  <!--Title-->
+  <title>CROHNS AND COLITIS</title>
+</head>
+<!--Style sheet-->
+<style>
+/*BODY Style*/
+@media screen and (min-width: 700px) {
+  body 
+  {
+    font-size: 20px;
+  }
+  div .l1 a img {
+    width:100px;
+    height:100px;
+  }
+}
+@media screen and (max-width: 700px) {
+  body 
+  {
+    font-size: 12px;
+  }
+  #contact
+  {
+    font-size: 10px;
+  }
+  div .l1 a img{
+    width:50px;
+    height:50px;
+  }
+}
+body
+{
+  background-color: rgba(240,240,240);
+  display:inherit;
+  overflow-x: hidden;
+  margin: 0px;
+}
+
+/*LOGO AND NAVBAR STYLE*/
+.navbar,.navbar1,.desc
+  {
+  overflow: hidden;
+  }
+  .gify:hover 
+  {
+    color: blue;
+    box-shadow: 0 0 40px white;
+    text-shadow: 0 0 40px white;
+  }
+.navbar a 
+  {
+  float: left;
+  font-size: 16px;
+  color: rgb(30,144,255);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }
+.cropped1
+  {
+  padding-left: 2%;
+  vertical-align: middle;
+  font-size: 150%;
+  }
+.navbar
+  {
+  background-image: url('https://image.freepik.com/free-photo/shades-blue-white-background_23-2147746645.jpg');
+  background-color: rgba(0,0,0, 0.3);
+  background-blend-mode: darken;
+  color: white;
+  font-size: 100%;
+  font-style: italic;
+  font-family:cursive;
+  padding-left: 2%;
+  resize: both;
+  overflow: auto;
+  }
+div.scrollmenu 
+  {
+  padding-top: 1%;
+  overflow: auto;
+  white-space: nowrap;
+  }
+div.scrollmenu a 
+  {
+  display: inline-block;
+  color: rgb(30,144,255);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  }
+  div.scrollmenu a:hover 
+  {
+  background-color: rgb(30,144,255);
+  color: white;
+  }
+.scrollmenu 
+  {
+  background-color: #eee;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll; 
+  }
+.mySlides
+  {
+  display: none;
+  }
+  /*onloader style*/
+.container 
+  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  }
+.item 
+  {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  list-style-type: none;
+  transition: 0.5s all ease;
+  }
+.item:nth-child(1) 
+{
+  animation: right-1 1s infinite alternate;
+  background-color: #49b8e5;
+  animation-delay: 100ms;
+}
+@keyframes right-1 {
+  0% {
+      transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(60px);
+  }
+}
+.item:nth-child(2) {
+  animation: right-2 1s infinite alternate;
+  background-color: #1e98d4;
+  animation-delay: 200ms;
+}
+@keyframes right-2 {
+  0% {
+      transform: translateY(-70px);
+  }
+  100% {
+    transform: translateY(70px);
+  }
+}
+.item:nth-child(3) {
+  animation: right-3 1s infinite alternate;
+  background-color: #2a92d0;
+  animation-delay: 300ms;
+}
+@keyframes right-3 {
+  0% {
+      transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(80px);
+  }
+}
+.item:nth-child(4) {
+  animation: right-4 1s infinite alternate;
+  background-color: #175181;
+  animation-delay: 400ms;
+}
+@keyframes right-4 {
+  0% {
+      transform: translateY(-90px);
+  }
+  100% {
+    transform: translateY(90px);
+  }
+}
+.item:nth-child(5) {
+  animation: right-5 1s infinite alternate;
+  background-color: #507cbe;
+  animation-delay: 500ms;
+}
+@keyframes right-5 {
+  0% {
+      transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+/*fade left animation*/
+.reveal{
+  position: relative;
+  transform: translate(-150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+/*fade right animation*/
+.reveal1{
+  position: relative;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal1.active1{
+  transform: translateX(0);
+  opacity: 1;
+}
+/*fade top animation*/
+.reveal2{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal2.active2{
+  transform: translateY(0);
+  opacity: 1;
+}
+</style>
+  <script>
+  /* onloader function*/
+   $(window).on('load', function () {  
+           $(".container").fadeOut("slow");  
+      }); 
+  /*fade left animation*/    
+     function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }}
+window.addEventListener("scroll", reveal);
+/*fade right animation*/
+function reveal1() {
+var reveals1 = document.querySelectorAll(".reveal1");
+  for (var i = 0; i < reveals1.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals1[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals1[i].classList.add("active1");
+    } else {
+      reveals1[i].classList.remove("active1");
+    }
+  }}
+  window.addEventListener("scroll", reveal1);
+  /*fade top animation*/
+  function reveal2() {
+var reveals2 = document.querySelectorAll(".reveal2");
+  for (var i = 0; i < reveals2.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals2[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals2[i].classList.add("active2");
+    } else {
+      reveals2[i].classList.remove("active2");
+    }
+  }}
+  window.addEventListener("scroll", reveal2);
+
+</script>
+
+<body>
+  <!--LOADER CONTENT-->
+  <div class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+  <!--LOGO AND WEBSITE NAME-->
+  <div class='navbar' id='title' >
+    <p ><img class="cropped1" src="https://drive.google.com/thumbnail?id=1JQ6epr36ugrVF7cuTlYMw9kL7J-pZrfd" width=45px height=40px>&nbsp HEALTH COMPANION</p>
+  </div>
+  <!--NAVIGATION BAR-->
+  <div class="scrollmenu">
+    <a href="index.html" >HOME</a>
+    <a href='/health-improviser-and-monitoring-system/Consulting%20doctors.html' >CONSULTING</a>
+    <a href='http://127.0.0.1:5000/' >CHECK MY HEALTH</a>
+    <a href="/health-improviser-and-monitoring-system/AI%20predictions.html" >AI PREDICTIONS</a>
+    <a href="/health-improviser-and-monitoring-system/Hospital.html">HOSPITAL CONSULTING</a>      
+    <a href="/health-improviser-and-monitoring-system/HealthyTips.html">HEALTH TIPS</a>
+    <a href="/health-improviser-and-monitoring-system/food1-1.html">FOOD INFO</a>
+    <a href="/health-improviser-and-monitoring-system/Disease%20information.html">DISEASE INFO</a>
+  </div>
+  <br><br>
+  <!--details about anemia patient diet-->
+  <div style="color: white; ">
+  <div class="navbar1" style="align-self:  center; color: white; font-display:auto; padding: 5%;background-color: #175181;">
+      <div class="split left" style="float:left;width: 45%;padding-left: 3%;">
+        <br> 
+        <img class="gify" src="https://drive.google.com/thumbnail?id=1XfVJ0up-FO0TbdZRD4gYfRxRqwQHy1FS" width="60%" height="60%" >   
+  </div>
+  <div class="split right" style="float:right;width: 45%;padding-right:7% ;">
+      <br>
+      <p style="padding-left: 1%; "><h2>CROHNS AND COLITIS</h2></p>
+      <p style="padding-left: 1%; ">“EAT HEALTHY STAY HEALTHY!!!”</p><br><br><br><br>
+  </div>
+  </div>    
+  <br>
+  <div style="color: white; background-color: #175181;padding-left:5%;padding-right: 5%;"><br><br>
+    <h2 class="reveal1"><b>CROHNS AND COLITIS PATIENTS:</b></h2>
+    <ul>
+    <li class="reveal1">Eat four to six small meals daily.</li>
+    <li class="reveal1">Stay hydrated — drink enough to keep your urine light yellow to clear — with water, broth, tomato juice, or a rehydration solution.</li>
+    <li class="reveal1">Drink slowly and avoid using a straw, which can cause you to ingest air, which may cause gas.</li>
+    <li class="reveal1">Prepare meals in advance, and keep your kitchen stocked with foods that you tolerate well (see list below).</li>
+    <li class="reveal1">Use simple cooking techniques — boil, grill, steam, poach.</li>
+    <h2 class="reveal">Refined Grains</h2>
+    <li class="reveal">Refined grains have less fermentable fiber than whole grains, so they pass more quickly through the digestive tract. They tend to be easier on the gut and less likely to cause inflammation.</li>
+    <li class="reveal">Examples of refined grains include:</li>
+    <li class="reveal">white breads</li>
+    <li class="reveal">white rice</li>
+    <li class="reveal">pasta</li>
+    <li class="reveal">plain crackers</li>
+    <li class="reveal">pancakes</li>
+    <li class="reveal">waffles</li>
+    <li class="reveal">rice snacks</li>
+    <h2 class="reveal1">Oatmeal</h2>
+    <li class="reveal1">Oatmeal made from quick or rolled oats is a type of refined grain, with slightly less fiber than steel-cut oats. Manufacturers produce oats by removing the hulls.</li>
+    <li class="reveal1">When experiencing a CD flare-up, it is best to avoid foods containing insoluble fiber, which can worsen symptoms of diarrhea.</li>
+    <li class="reveal1">Oatmeal contains a soluble fiber called beta-glucan. It can help ease diarrhea by absorbing water in the intestines, forming a gel, slowing digestion, and adding bulk to stool.</li>
+    <li class="reveal1">Try adding oats to smoothies that contain peeled, low-fiber fruits. Breaking down food in a blender makes digestion easier.</li>
+    <h2 class="reveal">Low-fiber fruits</h2>
+    <li class="reveal">Low-fiber fruits are easy on the digestive system, and they can help control diarrhea.</li>
+    <li class="reveal">Examples include:</li>
+    <li class="reveal">bananas</li>
+    <li class="reveal">honeydew melon</li>
+    <li class="reveal">watermelon</li>
+    <li class="reveal">cantaloupe</li>
+    <li class="reveal">peaches</li>
+    <li class="reveal">The amount of fiber in a piece of fruit changes as it ripens. Ripe fruits generally have less fiber than unripe fruits.</li>
+    <li class="reveal">However, during a CD flare-up, it is always best to eat fruit in small servings.</li>
+    <h2 class="reveal1"> Peeled or poached fruit</h2>
+    <li class="reveal1">Removing the skin or peel from a piece of fruit can reduce the amount of insoluble fibers, such as lignin and cellulose.</li>
+    <li class="reveal1">Poaching and preserving fruit can also decrease the amount of fiber. Generally, the more processing fruit goes through, the easier it is for the body to digest.</li>
+    <li class="reveal1">Canned and cooked fruits are often low in fiber, but they can contain high amounts of sugar, so eat them in moderation.</li>
+    <h2 class="reveal">Cooked and peeled vegetables</h2>
+    <li class="reveal">Peeling vegetables removes some of the insoluble fiber.</li>
+    <li class="reveal">Many vegetables are high in fiber, but as with fruit, peeling them removes a layer of insoluble fiber.</li>
+    <li class="reveal">Some vegetables do not need peeling, such as asparagus tips and mushrooms, but it can help to remove the skins of potatoes, carrots, and squash.</li>
+    <li class="reveal">Cooking vegetables also makes them easier to digest, and it can reduce the fiber contents.</li>
+    <li class="reveal">However, avoid roasting or frying vegetables in oil or butter, because fats can irritate the digestive system and worsen symptoms of Crohn’s. Try boiling or steaming them instead.</li>
+    <h2 class="reveal1">Vegetable and fruit juices</h2>
+    <li class="reveal1">Vegetable and fruit juices are low in fiber and high in some vitamins and minerals. Manufacturers also fortify some juices.</li>
+    <li class="reveal1">It is best to avoid sugar during a CD flare-up, but a daily glass of diluted fruit juice that contains no added sugar can help boost a person’s nutrient intake.</li>
+    <li class="reveal1">Vitamin C from fruit juice can also help the gut absorb iron.</li>
+    <h2 class="reveal">Lean meat</h2>
+    <li class="reveal">Foods that are high in fat can worsen or prolong symptoms during a CD flare-up.</li>
+    <li class="reveal">However, protein and other nutrients from animal products can help prevent malnutrition.</li>
+    <li class="reveal">Skinless chicken and turkey are good examples of lean meats. If a person is purchasing red meat, such as pork, they should select the leanest cut available and trim any excess visible fat.</li>
+    <h2 class="reveal1">Oily fish</h2>
+    <li class="reveal1">Oily fish contain healthful fats, including omega-3 fatty acids. These combat inflammation and may help reduce the risk of heart disease and certain cancers.</li>
+    <li class="reveal1">Health experts often recommend eating at least 2 servings of oily fish per week. These can include trout, salmon, mackerel, herring, tuna, and sardines.</li>
+    <li class="reveal1">To keep fat levels as low as possible, grill the fish or bake them with small amounts of vegetable oil.</li>
+    <li class="reveal1">It is best to cook the fish, for easy digestion.</li>
+    <h2 class="reveal">Soy, eggs, and firm tofu</h2>
+    <li class="reveal">Soy, eggs, and tofu are great sources of lean protein.</li>
+    <li class="reveal">Also, egg yolks contain high amounts of vitamin D, and people with CD are often deficient in vitamin D and ATrusted Source.</li>
+    <li class="reveal">In addition to lean protein, soy and tofu contain bioactive peptides, and some researchTrusted Source suggests that these have antioxidant and anti-inflammatory properties, which may help manage IBDTrusted Source.</li></ul><br><br>
+  </div>
+  <br><br>
+  <!--CONTACT AND LINKS SECTION-->
+  <div  id="contact" style="background-image: url('https://image.freepik.com/free-photo/shades-blue-white-background_23-2147746645.jpg');background-color: rgba(0,0,0, 0.59);background-blend-mode: darken;color: white;font-size:auto;"><br>
+    <table style="width: auto;padding-left: 5%;vertical-align: top;width:100%;">
+      <tr>  
+        <td >
+          <p >Contact<br>Mobile:1234567891<br>Email:abcd123@gmail.com</p>
+          <p >Follow us on</p><img src="https://www.beachrealtync.com/sites/default/files/uploads/socials_3.png" width=100px  ><br><br>
+        </td>
+        <td>
+          <p style="margin:0%;">USEFUL LINKS</p>
+          <hr style="color: white;width: 50%;float: left;margin:0%;">
+          <ul style="text-decoration:none;text-decoration-style: none;">
+            <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/HealthyTips.html" style="text-decoration:none;color: white;">diet plan</a></li>
+            <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/food1-1.html" style="text-decoration:none;color: white;">food tips</a></li>
+            <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/Disease%20information.html" style="text-decoration:none;color: white;">know about disease</a></li>
+            <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/Hospital.html" style="text-decoration:none;color: white;">famous hospital</a></li>
+          </ul>  
+        </td>
+        <td>
+          <p style="margin:0%;">OFFICIAL WEBSITES</p>
+          <hr style="color: white;width: 50%;float: left;margin:0%;">
+          <ul style="text-decoration:none;text-decoration-style: none;">
+            <li><a href="https://medlineplus.gov/encyclopedia.html" style="text-decoration:none;color: white;">DISEASE ENCYCLOPEDIA</a></li>
+            <li><a href="https://www.nal.usda.gov/legacy/fnic/food-dictionaries-and-encyclopedias" style="text-decoration:none;color: white;">FOOD ENCYCLOPEDIA</a></li>
+          </ul> 
+          <br><br> 
+        </td>
+      </tr>      
+      </table>
+      <br>
+  </div>
+  <!--OWNERS RIGHT-->
+  <div style="padding:0.2%;background-color:white;font-size: 100%; ">
+    <p style="text-align: center;color: #507cbe">managed by admins of this website</p>
+  </div>
+</body>
+</html>
+
+ 
+
+
+

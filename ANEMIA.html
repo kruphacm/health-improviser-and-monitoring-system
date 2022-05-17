@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<!-- script and stylsheet attachment  --> 
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+  <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/vendors/easings.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/vendors/scrolloverflow.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.js"></script>
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+  <!--Title-->
+  <title>ANEMIA</title>
+</head>
+<!--Style sheet-->
+<style>
+  /*BODY Style*/
+  @media screen and (min-width: 700px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 12px;
+  }
+  #contact
+  {
+    font-size: 10px;
+  }
+}
+  body
+  {
+    background-color: rgba(240,240,240);
+    display:inherit;
+    overflow-x: hidden;
+    margin: 0px;
+  }
+  /*LOGO AND NAVBAR STYLE*/
+ .navbar,.navbar1,.desc
+  {
+    overflow: hidden;
+  }
+  .navbar a 
+  {
+    float: left;
+    color: rgb(30,144,255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .cropped1
+  {
+    padding-left: 2%;
+    vertical-align: middle;
+    font-size: 150%;
+  }
+  .navbar
+  {
+    background-image: url('https://image.freepik.com/free-photo/shades-blue-white-background_23-2147746645.jpg');
+    background-color: rgba(0,0,0, 0.3);
+    background-blend-mode: darken;
+    color: white;
+    padding-left: 2%;
+    resize: both;
+    overflow: auto;
+  }
+  .gify:hover 
+  {
+    color: blue;
+    box-shadow: 0 0 40px white;
+    text-shadow: 0 0 40px white;
+  }
+  div.scrollmenu 
+  {
+    padding-top: 1%;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  div.scrollmenu a 
+  {
+    display: inline-block;
+    color: rgb(30,144,255);
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  div.scrollmenu a:hover 
+  {
+  background-color: rgb(30,144,255);
+  color: white;
+  }
+  .scrollmenu 
+  {
+    background-color: #eee;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll; 
+  }
+  .mySlides
+  {
+    display: none;
+  }
+  
+  /*onloader style*/
+  .container 
+  {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  height: 100vh;
+	  overflow: hidden;
+  }
+  .item 
+  {
+	  width: 20px;
+	  height: 20px;
+	  margin: 10px;
+	  list-style-type: none;
+	  transition: 0.5s all ease;
+  }
+  .item:nth-child(1) {
+	  animation: right-1 1s infinite alternate;
+	  background-color: #49b8e5;
+	  animation-delay: 100ms;
+  }
+  @keyframes right-1 {
+	  0% {
+	  	 transform: translateY(-60px);
+	  }
+	  100% {
+		  transform: translateY(60px);
+	  }
+  }
+  .item:nth-child(2) {
+	  animation: right-2 1s infinite alternate;
+	  background-color: #1e98d4;
+	  animation-delay: 200ms;
+  }
+  @keyframes right-2 {
+	  0% {
+	  	 transform: translateY(-70px);
+	  }
+	  100% {
+		  transform: translateY(70px);
+	  }
+  }
+  .item:nth-child(3) {
+	  animation: right-3 1s infinite alternate;
+	  background-color: #2a92d0;
+	  animation-delay: 300ms;
+  }
+  @keyframes right-3 {
+	  0% {
+	  	 transform: translateY(-80px);
+	  }
+	  100% {
+		  transform: translateY(80px);
+	  }
+  }
+  .item:nth-child(4) {
+	  animation: right-4 1s infinite alternate;
+	  background-color: #3a88c8;
+	  animation-delay: 400ms;
+  }
+  @keyframes right-4 {
+	  0% {
+	  	 transform: translateY(-90px);
+	  }
+	  100% {
+		  transform: translateY(90px);
+	  }
+  }
+  .item:nth-child(5) {
+	  animation: right-5 1s infinite alternate;
+	  background-color: #507cbe;
+	  animation-delay: 500ms;
+  }
+  @keyframes right-5 {
+	 0% {
+	  	 transform: translateY(-100px);
+	  }
+	  100% {
+		  transform: translateY(100px);
+	  }
+  }
+  /*fade left animation*/
+.reveal{
+  position: relative;
+  transform: translate(-150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+/*fade right animation*/
+.reveal1{
+  position: relative;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal1.active1{
+  transform: translateX(0);
+  opacity: 1;
+}
+/*fade top animation*/
+.reveal2{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal2.active2{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+</style>
+<script>
+  /* onloader function*/
+   $(window).on('load', function () {  
+           $(".container").fadeOut("slow");  
+      }); 
+      /*fade left animation*/    
+     function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }}
+window.addEventListener("scroll", reveal);
+/*fade right animation*/
+function reveal1() {
+var reveals1 = document.querySelectorAll(".reveal1");
+  for (var i = 0; i < reveals1.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals1[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals1[i].classList.add("active1");
+    } else {
+      reveals1[i].classList.remove("active1");
+    }
+  }}
+  window.addEventListener("scroll", reveal1);
+  /*fade top animation*/
+  function reveal2() {
+var reveals2 = document.querySelectorAll(".reveal2");
+  for (var i = 0; i < reveals2.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals2[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals2[i].classList.add("active2");
+    } else {
+      reveals2[i].classList.remove("active2");
+    }
+  }}
+  window.addEventListener("scroll", reveal2);
+
+</script>
+
+<body>
+  <!--LOADER CONTENT-->
+  <div class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+  <!--LOGO AND WEBSITE NAME-->
+  <div class='navbar' id='title' >
+    <p ><img class="cropped1" src="https://drive.google.com/thumbnail?id=1JQ6epr36ugrVF7cuTlYMw9kL7J-pZrfd" width=45px height=40px>&nbsp HEALTH COMPANION</p>
+  </div>
+  <!--NAVIGATION BAR-->
+  <div class="scrollmenu">
+            <a href="index.html" >HOME</a>
+            <a href='/health-improviser-and-monitoring-system/Consulting%20doctors.html' >CONSULTING</a>
+            <a href='https://aiforecasting.herokuapp.com/' >CHECK MY HEALTH</a>
+            <a href="/health-improviser-and-monitoring-system/AI%20predictions.html" >AI PREDICTIONS</a>
+            <a href="/health-improviser-and-monitoring-system/Hospital.html">HOSPITAL CONSULTING</a>      
+            <a href="/health-improviser-and-monitoring-system/HealthyTips.html">HEALTH TIPS</a>
+            <a href="/health-improviser-and-monitoring-system/food1-1.html">FOOD INFO</a>
+            <a href="/health-improviser-and-monitoring-system/Disease%20information.html">DISEASE INFO</a>
+  </div>
+  <br><br>
+  <!--details about anemia patient diet-->
+  <div style="color: white; ">
+    <div class="navbar1" style="align-self:  center; color: white; font-display:auto; padding: 3%;background-color: #175181;background-size: cover;">
+      <div class="split left" style="float:left;width: 45%;padding-left: 3%;"> 
+        <br>
+        <img class="gify" src="https://thumbs.dreamstime.com/b/iron-rich-foods-efficient-nutrition-concept-vector-illustration-what-to-eat-treat-anemia-medical-infographic-isolated-white-239308614.jpg" width="60%" height="60%">   
+      </div>
+      <div class="split right" style="float:right;width: 45%;padding-right:7% ;">
+        <br>
+        <p style="padding-left: 1%; "><h2>ANEMIA</h2></p>
+        <p style="padding-left: 1%; ">“EAT HEALTHY STAY HEALTHY!!!”</p>
+      </div>
+    </div>    
+  <br>
+  <div class="reveal2"style="color: white;background-color: #175181;padding-left:5%;padding-right:5%;background-repeat: no-repeat;background-size: cover;"><br>
+    <h2 class="reveal1"><b>ANEMIA PATIENTS:</b></h2>
+    <ul>
+      <h2 class="reveal1">Leafy greens</h2>
+      <li class="reveal1">Leafy greens, especially dark ones, are among the best sources of nonheme iron. They include:</li>
+      <li class="reveal1">spinach</li>
+      <li class="reveal1">kale</li>
+      <li class="reveal1">collard greens</li>
+      <li class="reveal1">dandelion greens</li>
+      <li class="reveal1">Swiss chard</li>
+      <li class="reveal1">Some leafy greens such as Swiss chard and collard greens also contain folate. A diet low in folate may cause folate deficiency anemia. Citrus fruits, beans, and whole grains are good sources of folate.</li>
+      <li class="reveal1">When eating dark, leafy greens for iron, there’s a catch. Some greens high in iron, such as spinach and kale, are also high in oxalates. Oxalates can bind with iron, preventing the absorption of nonheme iron.</li>
+      <h2 class="reveal">Meat and poultry</h2>
+      <li class="reveal">All meat and poultry contain heme iron. Red meat, lamb, and venison are the best sources. Poultry and chicken have lower amounts.</li>
+      <li class="reveal">Eating meat or poultry with nonheme iron foods, such as leafy greens, along with a vitamin C-rich fruit can increase iron absorption.</li>
+      <h2 class="reveal1"> Liver</h2>
+      <li class="reveal1">Many people shy away from organ meats, but they’re a great source of iron.</li>
+      <li class="reveal1">Liver is arguably the most popular organ meat. It’s rich in iron and folate. Some other iron-rich organ meats are heart, kidney, and beef tongue.</li>
+      <h2 class="reveal">Seafood</h2>
+      <li class="reveal">Some seafood provides heme iron. Shellfish such as oysters, clams, scallops, crabs, and shrimp are good sources. Most fish contain iron.</li>
+      <h2 class="reveal1">Fish with the best levels of iron include:</h2>
+      <li class="reveal1">canned or fresh tuna</li>
+      <li class="reveal1">mackerel</li>
+      <li class="reveal1">mahi mahi</li>
+      <li class="reveal1">pompano</li>
+      <li class="reveal1">fresh perch</li>
+      <li class="reveal1">fresh or canned salmon</li>
+      <li class="reveal1">Shop for canned tuna online.</li>
+      <li class="reveal1">Although canned sardines are good sources of iron, they’re also high in calcium.</li>
+      <li class="reveal1">Calcium may bind with iron and reduces its absorption. Foods high in calcium shouldn’t be eaten at the same time as iron-rich foods.</li>
+      <h2 class="reveal">Other examples of calcium-rich foods include:</h2>
+      <li class="reveal">dairy milk</li>
+      <li class="reveal">fortified plant milks</li>
+      <li class="reveal">yogurt</li>
+      <li class="reveal">kefir</li>
+      <li class="reveal">cheese</li>
+      <li class="reveal">tofu</li>
+      <h2 class="reveal1">Fortified foods</h2>
+      <li class="reveal1">Many foods are fortified with iron. Add these foods to your diet if you’re a vegetarian or struggle to eat other sources of iron:</li>
+      <li class="reveal1">fortified orange juice</li>
+      <li class="reveal1">fortified ready-to-eat cereals</li>
+      <li class="reveal1">foods made from fortified refined flour such as white bread</li>
+      <li class="reveal1">fortified pasta</li>
+      <li class="reveal1">foods made from fortified cornmeal</li>
+      <li class="reveal1">fortified white rice</li>
+      <h2 class="reveal">Beans</h2>
+      <li class="reveal">Beans are good sources of iron for vegetarians and meat eaters alike. They’re also inexpensive and versatile.</li>
+      <h2 class="reveal1">Some iron-rich options are:</h2>
+      <li class="reveal1">kidney beans</li>
+      <li class="reveal1">chickpeas</li>
+      <li class="reveal1">soybeans</li>
+      <li class="reveal1">black-eyed peas</li>
+      <li class="reveal1">pinto beans</li>
+      <li class="reveal1">black beans</li>
+      <li class="reveal1">peas</li>
+      <li class="reveal1">lima beans</li>
+      <li class="reveal1">Shop for canned beans.</li>
+      <h2 class="reveal">Nuts and seeds</h2>
+      <li class="reveal">Many types of nuts and seeds are good sources of iron. They taste great on their own or sprinkled on salads or yogurt.</li>
+      <h2 class="reveal1">Some nuts and seeds that contain iron are:</h2>
+      <li class="reveal1">pumpkin seeds</li>
+      <li class="reveal1">cashews</li>
+      <li class="reveal1">pistachios</li>
+      <li class="reveal1">hemp seeds</li>
+      <li class="reveal1">pine nuts</li>
+      <li class="reveal1">sunflower seeds</li>
+      <li class="reveal1">Find raw pumpkin seeds, raw cashews, and raw pine nuts online.</li>
+      <li class="reveal1">Both raw and roasted nuts have similar amounts of iron.</li>
+      <li class="reveal1">Almonds are also a good source of iron. They’re great as part of a healthy eating plan, but since they’re also high in calcium, they may not increase your iron levels that much.</li></ul><br><br>
+    </div>
+    <br><br>
+  <!--CONTACT AND LINKS SECTION-->
+  <div  id="contact" style="background-image: url('https://image.freepik.com/free-photo/shades-blue-white-background_23-2147746645.jpg');background-color: rgba(0,0,0, 0.59);background-blend-mode: darken;color: white;font-size:auto;"><br>
+    <table style="width: auto;padding-left: 5%;vertical-align: top;width:100%;">
+      <tr>  
+        <td >
+          <p >Contact<br>Mobile:1234567891<br>Email:abcd123@gmail.com</p>
+          <p >Follow us on</p><img src="https://www.beachrealtync.com/sites/default/files/uploads/socials_3.png" width=100px  ><br><br>
+        </td>
+        <td>
+          <p style="margin:0%;">USEFUL LINKS</p>
+          <hr style="color: white;width: 50%;float: left;margin:0%;">
+          <ul style="text-decoration:none;text-decoration-style: none;">
+            <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/HealthyTips.html" style="text-decoration:none;color: white;">diet plan</a></li>
+            <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/food1-1.html" style="text-decoration:none;color: white;">food tips</a></li>
+            <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/Disease%20information.html" style="text-decoration:none;color: white;">know about disease</a></li>
+            <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/Hospital.html" style="text-decoration:none;color: white;">famous hospital</a></li>
+          </ul>  
+        </td>
+        <td>
+          <p style="margin:0%;">OFFICIAL WEBSITES</p>
+          <hr style="color: white;width: 50%;float: left;margin:0%;">
+          <ul style="text-decoration:none;text-decoration-style: none;">
+            <li><a href="https://medlineplus.gov/encyclopedia.html" style="text-decoration:none;color: white;">DISEASE ENCYCLOPEDIA</a></li>
+            <li><a href="https://www.nal.usda.gov/legacy/fnic/food-dictionaries-and-encyclopedias" style="text-decoration:none;color: white;">FOOD ENCYCLOPEDIA</a></li>
+          </ul> 
+          <br><br> 
+        </td>
+      </tr>      
+      </table>
+      <br>
+  </div>
+  <!--OWNERS RIGHT-->
+  <div style="padding:0.2%;background-color:white;font-size: 100%; ">
+    <p style="text-align: center;color: #507cbe">managed by admins of this website</p>
+  </div>
+</body>
+</html>

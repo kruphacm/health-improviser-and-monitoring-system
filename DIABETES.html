@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<!-- script and stylsheet attachment  --> 
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/vendors/easings.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/vendors/scrolloverflow.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.js"></script>
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+  <!--Title-->
+  <title>DIABETES</title>
+</head>
+<!--Style sheet-->
+<style>
+/*BODY Style*/
+@media screen and (min-width: 700px) {
+  body 
+  {
+    font-size: 20px;
+  }
+  div .l1 a img {
+    width:100px;
+    height:100px;
+  }
+}
+@media screen and (max-width: 700px) {
+  body 
+  {
+    font-size: 12px;
+  }
+  #contact
+  {
+    font-size: 10px;
+  }
+  div .l1 a img{
+    width:50px;
+    height:50px;
+  }
+}
+body
+{
+  background-color: rgba(240,240,240);
+  display:inherit;
+  overflow-x: hidden;
+  margin: 0px;
+}
+
+/*LOGO AND NAVBAR STYLE*/
+.navbar,.navbar1,.desc
+  {
+  overflow: hidden;
+  }
+  .gify:hover 
+  {
+    color: blue;
+    box-shadow: 0 0 40px white;
+    text-shadow: 0 0 40px white;
+  }
+.navbar a 
+  {
+  float: left;
+  font-size: 16px;
+  color: rgb(30,144,255);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }
+.cropped1
+  {
+  padding-left: 2%;
+  vertical-align: middle;
+  font-size: 150%;
+  }
+.navbar
+  {
+  background-image: url('https://image.freepik.com/free-photo/shades-blue-white-background_23-2147746645.jpg');
+  background-color: rgba(0,0,0, 0.3);
+  background-blend-mode: darken;
+  color: white;
+  font-size: 100%;
+  font-style: italic;
+  font-family:cursive;
+  padding-left: 2%;
+  resize: both;
+  overflow: auto;
+  }
+div.scrollmenu 
+  {
+  padding-top: 1%;
+  overflow: auto;
+  white-space: nowrap;
+  }
+div.scrollmenu a 
+  {
+  display: inline-block;
+  color: rgb(30,144,255);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  }
+  div.scrollmenu a:hover 
+  {
+  background-color: rgb(30,144,255);
+  color: white;
+  }
+.scrollmenu 
+  {
+  background-color: #eee;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll; 
+  }
+.mySlides
+  {
+  display: none;
+  }
+  /*onloader style*/
+.container 
+  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  }
+.item 
+  {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  list-style-type: none;
+  transition: 0.5s all ease;
+  }
+.item:nth-child(1) 
+{
+  animation: right-1 1s infinite alternate;
+  background-color: #49b8e5;
+  animation-delay: 100ms;
+}
+@keyframes right-1 {
+  0% {
+      transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(60px);
+  }
+}
+.item:nth-child(2) {
+  animation: right-2 1s infinite alternate;
+  background-color: #1e98d4;
+  animation-delay: 200ms;
+}
+@keyframes right-2 {
+  0% {
+      transform: translateY(-70px);
+  }
+  100% {
+    transform: translateY(70px);
+  }
+}
+.item:nth-child(3) {
+  animation: right-3 1s infinite alternate;
+  background-color: #2a92d0;
+  animation-delay: 300ms;
+}
+@keyframes right-3 {
+  0% {
+      transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(80px);
+  }
+}
+.item:nth-child(4) {
+  animation: right-4 1s infinite alternate;
+  background-color: #175181;
+  animation-delay: 400ms;
+}
+@keyframes right-4 {
+  0% {
+      transform: translateY(-90px);
+  }
+  100% {
+    transform: translateY(90px);
+  }
+}
+.item:nth-child(5) {
+  animation: right-5 1s infinite alternate;
+  background-color: #507cbe;
+  animation-delay: 500ms;
+}
+@keyframes right-5 {
+  0% {
+      transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+/*fade left animation*/
+.reveal{
+  position: relative;
+  transform: translate(-150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+/*fade right animation*/
+.reveal1{
+  position: relative;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal1.active1{
+  transform: translateX(0);
+  opacity: 1;
+}
+/*fade top animation*/
+.reveal2{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal2.active2{
+  transform: translateY(0);
+  opacity: 1;
+}
+</style>
+  <script>
+  /* onloader function*/
+   $(window).on('load', function () {  
+           $(".container").fadeOut("slow");  
+      }); 
+  /*fade left animation*/    
+     function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }}
+window.addEventListener("scroll", reveal);
+/*fade right animation*/
+function reveal1() {
+var reveals1 = document.querySelectorAll(".reveal1");
+  for (var i = 0; i < reveals1.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals1[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals1[i].classList.add("active1");
+    } else {
+      reveals1[i].classList.remove("active1");
+    }
+  }}
+  window.addEventListener("scroll", reveal1);
+  /*fade top animation*/
+  function reveal2() {
+var reveals2 = document.querySelectorAll(".reveal2");
+  for (var i = 0; i < reveals2.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals2[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals2[i].classList.add("active2");
+    } else {
+      reveals2[i].classList.remove("active2");
+    }
+  }}
+  window.addEventListener("scroll", reveal2);
+
+</script>
+
+<body>
+  <!--LOADER CONTENT-->
+  <div class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+  <!--LOGO AND WEBSITE NAME-->
+  <div class='navbar' id='title' >
+    <p ><img class="cropped1" src="https://drive.google.com/thumbnail?id=1JQ6epr36ugrVF7cuTlYMw9kL7J-pZrfd" width=45px height=40px>&nbsp HEALTH COMPANION</p>
+  </div>
+  <!--NAVIGATION BAR-->
+  <div class="scrollmenu">
+    <a href="index.html" >HOME</a>
+    <a href='/health-improviser-and-monitoring-system/Consulting%20doctors.html' >CONSULTING</a>
+    <a href='http://krupha.pythonanywhere.com/' >CHECK MY HEALTH</a>
+    <a href="/health-improviser-and-monitoring-system/AI%20predictions.html" >AI PREDICTIONS</a>
+    <a href="/health-improviser-and-monitoring-system/Hospital.html">HOSPITAL CONSULTING</a>      
+    <a href="/health-improviser-and-monitoring-system/HealthyTips.html">HEALTH TIPS</a>
+    <a href="/health-improviser-and-monitoring-system/food1-1.html">FOOD INFO</a>
+    <a href="/health-improviser-and-monitoring-system/Disease%20information.html">DISEASE INFO</a>
+  </div>
+  <br><br>
+  <!--diabetes introduction view-->
+    <div  style="color: white; ">
+    <div class="navbar1" style="align-self:  center; color: white; font-display:auto;background-color: #175181;">
+      <div class="split left" style="float:left;width: 40%;padding-left:5%;padding-top: 10%; ">
+        <img class="gify" src="https://drive.google.com/thumbnail?id=1-caNEyfz4_ccdNxV14H9m3vLlRJ8K_M7" width="60%" height="60%"> 
+        <br>  
+      </div>
+
+      <div class="split right" style="float:right;width: 55%;padding-top: 10%;">
+        <br>
+        <p style="padding-left: 1%; "><h2>DIABETES</h2></p>
+        <p style="padding-left: 1%; ">“EAT HEALTHY STAY HEALTHY!!!”</p>
+        <br>
+      <br><br><br><br><br>
+        <br>
+      </div>
+  <!--diabetes information section-->    
+  </div>    
+  <br>
+  <div  class="reveal2"style="color: white;padding-left:5%;background-color: #175181;"><br><br>
+    <h2 class="reveal"><b>DIABETIC PATIENTS:</b></h2>
+    <ul class="reveal">
+    <h2  class="reveal">Fatty Fish</h2>
+    <li class="reveal">Some people consider fatty fish to be one of the healthiest foods on the planet.</li>
+    <li class="reveal">Salmon, sardines, herring, anchovies and mackerel are great sources of the omega-3 fatty acids DHA and EPA, which have major benefits for heart health.</li>
+    <li class="reveal">Getting enough of these fats on a regular basis is especially important for people with diabetes, who have an increased risk for heart disease and stroke (2Trusted Source).</li>
+    <li  class="reveal">DHA and EPA protect the cells that line your blood vessels, reduce markers of inflammation and may help improve the way your arteries function (3Trusted Source, 4Trusted Source, 5Trusted Source, 6Trusted Source).</li>
+    <li class="reveal">Research indicates that people who eat fatty fish regularly have a lower risk for acute coronary syndromes, like heart attacks, and are less likely to die from heart disease (7, 8Trusted Source).</li>
+    <h2 class="reveal1">Leafy Greens</h2>
+    <li class="reveal1">Leafy green vegetables are extremely nutritious and low in calories.</li>
+    <li class="reveal1">They’re also very low in digestible carbs, or carbs absorbed by the body, so they won’t significantly affect blood sugar levels.</li>
+    <li class="reveal1">Spinach, kale and other leafy greens are good sources of many vitamins and minerals, including vitamin C.</li>
+    <li class="reveal1">Vitamin C acts as a potent antioxidant and also has anti-inflammatory qualities.</li>
+    <h2 class="reveal">Avocados</h2>
+    <li class="reveal">Avocados have less than 1 gram of sugar, few carbohydrates, a high fiber content, and healthy fats, so you don’t have to worry about them raising your blood sugar levels (15Trusted Source).</li>
+    <li class="reveal">Avocado consumption is also associated with improved overall diet quality and significantly lower body weight and body mass index (BMI) (16Trusted Source).</li>
+    <li class="reveal">Avocados may have properties specific to preventing diabetes.</li>
+    <h2 class="reveal1">Eggs</h2>
+    <li class="reveal1">Eggs provide amazing health benefits.</li>
+    <li class="reveal1">In fact, they’re one of the best foods for keeping you full and satisfied in between meals (18Trusted Source, 19Trusted Source).</li>
+    <li class="reveal1">Regular egg consumption may also reduce your heart disease risk in several ways.</li>
+    <li class="reveal1">Eggs decrease inflammation, improve insulin sensitivity, increase your HDL (good) cholesterol levels and modify the size and shape of your LDL (bad) cholesterol (20Trusted Source, 21Trusted Source, 22Trusted Source, 23Trusted Source)</li>
+    <h2 class="reveal">Chia Seeds</h2>
+    <li class="reveal">Chia seeds are a wonderful food for people with diabetes.</li>
+    <li class="reveal">They’re extremely high in fiber, yet low in digestible carbs.</li>
+    <li class="reveal">In fact, 11 of the 12 grams of carbs in a 28-gram (1-ounce) serving of chia seeds are fiber, which doesn’t raise blood sugar (29Trusted Source).</li>
+    <h2 class="reveal1">Beans</h2>
+    <li class="reveal1">Beans are cheap, nutritious, and super healthy.</li>
+    <li class="reveal1">Beans are a type of legume rich in B vitamins, beneficial minerals (calcium, potassium, and magnesium), and fiber.</li>
+    <li class="reveal1">They also have a very low glycemic index, which is important for managing diabetes.</li>
+    <li class="reveal1">Beans may also help prevent diabetes.</li>
+    <h2 class="reveal">Greek Yogurt</h2>
+    <li class="reveal">Greek yogurt is a great dairy choice for people with diabetes.</li>
+    <li class="reveal">Some research suggests that eating certain dairy products like yogurt may improve blood sugar management and reduce heart disease risk factors, perhaps partly due to the probiotics it contains (35Trusted Source, 36Trusted Source).</li>
+    <li class="reveal">Studies also indicate that yogurt consumption may be associated with lower levels of blood glucose and insulin resistance (37).</li>
+    <li class="reveal">Additionally, yogurt may reduce your risk for diabetes.</li>
+    <h2 class="reveal1">Nuts</h2>
+    <li class="reveal1">Nuts are delicious and nutritious.</li>
+    <li class="reveal1">All types of nuts contain fiber and are low in net carbs, although some have more than others.</li>
+    <li class="reveal1">Here are the amounts of digestible carbs, per 1-ounce (28-gram) serving of nuts, according to the U.S. Department of Agriculture (44Trusted Source):</li>
+    <li class="reveal1">Almonds: 2.6 grams</li>
+    <li class="reveal1">Brazil nuts: 1.4 grams</li>
+    <li class="reveal1">Cashews: 7.7 grams</li>
+    <li class="reveal1">Hazelnuts: 2 grams</li>
+    <li class="reveal1">Macadamia: 1.5 grams</li>
+    <li class="reveal1">Pecans: 1.2 grams</li>
+    <li class="reveal1">Pistachios: 5 grams</li>
+    <li class="reveal1">Walnuts: 2 grams</li>
+    <li class="reveal1">Research on a variety of different nuts has shown that regular consumption may reduce inflammation and lower blood sugar, HbA1c (a marker for long-term blood sugar management) and LDL (bad) cholesterol levels (45Trusted Source, 46Trusted Source, 47Trusted Source, 48Trusted Source).</li>
+    <li class="reveal1">Nuts may also help people with diabetes improve their heart health.</li>
+    <h2 class="reveal"> Broccoli</h2>
+    <li class="reveal">Broccoli is one of the most nutritious vegetables around.</li>
+    <li class="reveal">A half cup of cooked broccoli contains only 27 calories and 3 grams of digestible carbs, along with important nutrients like vitamin C and magnesium (52Trusted Source).</li>
+    <li class="reveal">What’s more, studies in people with diabetes have found that eating broccoli sprouts may help lower insulin levels and protect against cellular damage (53Trusted Source, 54Trusted Source).</li>
+    <li class="reveal">Broccoli may also help manage your blood sugar levels.</li>
+    <h2 class="reveal1">Extra-Virgin Olive Oil</h2>
+    <li class="reveal1">Extra-virgin olive oil is extremely beneficial for heart health.</li>
+    <li class="reveal1">It contains oleic acid, a type of monounsaturated fat that has been shown to improve glycemic management, reduce fasting and post-meal triglyceride levels, and have antioxidant properties (57Trusted Source, 58Trusted Source, 59).</li>
+    <li class="reveal1">This is important because people with diabetes tend to have trouble managing blood sugar levels and have high triglyceride levels.</li>
+    <li class="reveal1">Oleic acid may also stimulate the fullness hormone GLP-1 (60Trusted Source).</li>
+    <h2 class="reveal">Flaxseeds</h2>
+    <li class="reveal">Flaxseeds are an incredibly healthy food.</li>
+    <li class="reveal">Also known as common flax or linseeds, flaxseeds have a high content of heart-healthy omega-3 fats, fiber, and other unique plant compounds (67Trusted Source).</li>
+    <li class="reveal">A portion of their insoluble fiber is made up of lignans, which may help decrease heart disease risk and improve blood sugar management (68Trusted Source).</li>
+    <li class="reveal">A review analyzing 25 randomized clinical trials found a significant association between whole flaxseed supplementation and a reduction in blood glucose (69).</li>
+    <h2 class="reveal1">Apple cider vinegar</h2>
+    <li class="reveal1">Apple cider vinegar has many health benefits.</li>
+    <li class="reveal1">Although it’s made from apples, the sugar in the fruit is fermented into acetic acid, and the resulting product contains less than 1 gram of carbs per tablespoon.</li>
+    <li class="reveal1">According to a meta-analysis of six studies, including 317 patients with type 2 diabetes, apple cider vinegar has beneficial effects on fasting blood sugar levels and HbA1c (75Trusted Source)</li>
+    <h2 class="reveal">Strawberries</h2>
+    <li class="reveal">Strawberries are one of the most nutritious fruits you can eat.</li>
+    <li class="reveal">They’re high in antioxidants known as anthocyanins, which give them their red color.</li>
+    <li class="reveal">Anthocyanins have been shown to reduce cholesterol and insulin levels after a meal. They also improve blood sugar and heart disease risk factors for people with type 2 diabetes (79Trusted Source, 80Trusted Source, 81Trusted Source, 82).</li>
+    <li class="reveal">Strawberries also contain polyphenols, which are beneficial plant compounds with antioxidant properties.</li>
+    <h2 class="reveal1">Garlic</h2>
+    <li class="reveal1">For its tiny size and low calorie count, garlic is incredibly nutritious.</li>
+    <li class="reveal1">One clove (3 grams) of raw garlic, which is roughly 4 calories, contains (84Trusted Source):Trusted Source</li>
+    <li class="reveal1">Manganese: 2% of the Daily Value (DV)</li>
+    <li class="reveal1">Vitamin B6: 2% of the DV</li>
+    <li class="reveal1">Vitamin C: 1% of the DV</li>
+    <li class="reveal1">Selenium: 1% of the DV</li>
+    <li class="reveal1">Fiber: 0.06 grams</li>
+    <li class="reveal1">Research indicates that garlic contributes to improved blood glucose management and can help regulate cholesterol (85Trusted Source).</li></ul><br><br>
+  </div>
+  <br><br>
+  <!--CONTACT AND LINKS SECTION-->
+  <div  id="contact" style="background-image: url('https://image.freepik.com/free-photo/shades-blue-white-background_23-2147746645.jpg');background-color: rgba(0,0,0, 0.59);background-blend-mode: darken;color: white;font-size:auto;"><br>
+    <table style="width: auto;padding-left: 5%;vertical-align: top;width:100%;">
+      <tr>  
+        <td >
+          <p >Contact<br>Mobile:1234567891<br>Email:abcd123@gmail.com</p>
+          <p >Follow us on</p><img src="https://www.beachrealtync.com/sites/default/files/uploads/socials_3.png" width=100px  ><br><br>
+        </td>
+        <td>
+          <p style="margin:0%;">USEFUL LINKS</p>
+          <hr style="color: white;width: 50%;float: left;margin:0%;">
+          <ul style="text-decoration:none;text-decoration-style: none;">
+            <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/HealthyTips.html" style="text-decoration:none;color: white;">diet plan</a></li>
+            <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/food1-1.html" style="text-decoration:none;color: white;">food tips</a></li>
+            <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/Disease%20information.html" style="text-decoration:none;color: white;">know about disease</a></li>
+            <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/Hospital.html" style="text-decoration:none;color: white;">famous hospital</a></li>
+          </ul>  
+        </td>
+        <td>
+          <p style="margin:0%;">OFFICIAL WEBSITES</p>
+          <hr style="color: white;width: 50%;float: left;margin:0%;">
+          <ul style="text-decoration:none;text-decoration-style: none;">
+            <li><a href="https://medlineplus.gov/encyclopedia.html" style="text-decoration:none;color: white;">DISEASE ENCYCLOPEDIA</a></li>
+            <li><a href="https://www.nal.usda.gov/legacy/fnic/food-dictionaries-and-encyclopedias" style="text-decoration:none;color: white;">FOOD ENCYCLOPEDIA</a></li>
+          </ul> 
+          <br><br> 
+        </td>
+      </tr>      
+      </table>
+      <br>
+  </div>
+  <!--OWNERS RIGHT-->
+  <div style="padding:0.2%;background-color:white;font-size: 100%; ">
+    <p style="text-align: center;color: #507cbe">managed by admins of this website</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<!-- script and stylsheet attachment  --> 
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/vendors/easings.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/vendors/scrolloverflow.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.js"></script>
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+  <!--Title-->
+  <title>HEALTHY FOOD</title>
+</head>
+<!--Style sheet-->
+<style>
+/*BODY Style*/
+@media screen and (min-width: 700px) {
+  body 
+  {
+    font-size: 20px;
+  }
+  .gify {
+    width:300px;
+    height:300px;
+  }
+}
+@media screen and (max-width: 700px) {
+  body 
+  {
+    font-size: 12px;
+  }
+  #contact
+  {
+    font-size: 10px;
+  }
+  .gify{
+    width:150px;
+    height:150px;
+  }
+}
+body
+{
+  background-color: rgba(240,240,240);
+  display:inherit;
+  overflow-x: hidden;
+  margin: 0px;
+}
+
+/*LOGO AND NAVBAR STYLE*/
+.navbar,.navbar1,.desc
+  {
+  overflow: hidden;
+  }
+  div a img
+  {
+    padding: 2%;
+  }
+  div a img:hover 
+  {
+    color: white;
+    box-shadow: 0 0 40px white;
+    text-shadow: 0 0 40px white;
+  }
+.navbar a 
+  {
+  float: left;
+  font-size: 16px;
+  color: rgb(30,144,255);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }
+.cropped1
+  {
+  padding-left: 2%;
+  vertical-align: middle;
+  font-size: 150%;
+  }
+.navbar
+  {
+  background-image: url('https://image.freepik.com/free-photo/shades-blue-white-background_23-2147746645.jpg');
+  background-color: rgba(0,0,0, 0.3);
+  background-blend-mode: darken;
+  color: white;
+  font-size: 100%;
+  font-style: italic;
+  font-family:cursive;
+  padding-left: 2%;
+  resize: both;
+  overflow: auto;
+  }
+div.scrollmenu 
+  {
+  padding-top: 1%;
+  overflow: auto;
+  white-space: nowrap;
+  }
+div.scrollmenu a 
+  {
+  display: inline-block;
+  color: rgb(30,144,255);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  }
+  div.scrollmenu a:hover 
+  {
+  background-color: rgb(30,144,255);
+  color: white;
+  }
+.scrollmenu 
+  {
+  background-color: #eee;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll; 
+  }
+.mySlides
+  {
+  display: none;
+  }
+  /*onloader style*/
+.container 
+  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  }
+.item 
+  {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  list-style-type: none;
+  transition: 0.5s all ease;
+  }
+.item:nth-child(1) 
+{
+  animation: right-1 1s infinite alternate;
+  background-color: #49b8e5;
+  animation-delay: 100ms;
+}
+@keyframes right-1 {
+  0% {
+      transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(60px);
+  }
+}
+.item:nth-child(2) {
+  animation: right-2 1s infinite alternate;
+  background-color: #1e98d4;
+  animation-delay: 200ms;
+}
+@keyframes right-2 {
+  0% {
+      transform: translateY(-70px);
+  }
+  100% {
+    transform: translateY(70px);
+  }
+}
+.item:nth-child(3) {
+  animation: right-3 1s infinite alternate;
+  background-color: #2a92d0;
+  animation-delay: 300ms;
+}
+@keyframes right-3 {
+  0% {
+      transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(80px);
+  }
+}
+.item:nth-child(4) {
+  animation: right-4 1s infinite alternate;
+  background-color: #175181;
+  animation-delay: 400ms;
+}
+@keyframes right-4 {
+  0% {
+      transform: translateY(-90px);
+  }
+  100% {
+    transform: translateY(90px);
+  }
+}
+.item:nth-child(5) {
+  animation: right-5 1s infinite alternate;
+  background-color: #507cbe;
+  animation-delay: 500ms;
+}
+@keyframes right-5 {
+  0% {
+      transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+/*fade left animation*/
+.reveal{
+  position: relative;
+  transform: translate(-150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+/*fade right animation*/
+.reveal1{
+  position: relative;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal1.active1{
+  transform: translateX(0);
+  opacity: 1;
+}
+/*fade top animation*/
+.reveal2{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal2.active2{
+  transform: translateY(0);
+  opacity: 1;
+}
+</style>
+  <script>
+  /* onloader function*/
+   $(window).on('load', function () {  
+           $(".container").fadeOut("slow");  
+      }); 
+  /*fade left animation*/    
+     function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }}
+window.addEventListener("scroll", reveal);
+/*fade right animation*/
+function reveal1() {
+var reveals1 = document.querySelectorAll(".reveal1");
+  for (var i = 0; i < reveals1.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals1[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals1[i].classList.add("active1");
+    } else {
+      reveals1[i].classList.remove("active1");
+    }
+  }}
+  window.addEventListener("scroll", reveal1);
+  /*fade top animation*/
+  function reveal2() {
+var reveals2 = document.querySelectorAll(".reveal2");
+  for (var i = 0; i < reveals2.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals2[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals2[i].classList.add("active2");
+    } else {
+      reveals2[i].classList.remove("active2");
+    }
+  }}
+  window.addEventListener("scroll", reveal2);
+
+</script>
+
+<body>
+  <!--LOADER CONTENT-->
+  <div class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+  <!--LOGO AND WEBSITE NAME-->
+  <div class='navbar' id='title' >
+    <p ><img class="cropped1" src="https://drive.google.com/thumbnail?id=1JQ6epr36ugrVF7cuTlYMw9kL7J-pZrfd" width=45px height=40px>&nbsp HEALTH COMPANION</p>
+  </div>
+  <!--NAVIGATION BAR-->
+  <div class="scrollmenu">
+    <a href="index.html" >HOME</a>
+    <a href='/health-improviser-and-monitoring-system/Consulting%20doctors.html' >CONSULTING</a>
+    <a href='http://krupha.pythonanywhere.com/' >CHECK MY HEALTH</a>
+    <a href="/health-improviser-and-monitoring-system/AI%20predictions.html" >AI PREDICTIONS</a>
+    <a href="/health-improviser-and-monitoring-system/Hospital.html">HOSPITAL CONSULTING</a>      
+    <a href="/health-improviser-and-monitoring-system/HealthyTips.html">HEALTH TIPS</a>
+    <a href="/health-improviser-and-monitoring-system/food1-1.html">FOOD INFO</a>
+    <a href="/health-improviser-and-monitoring-system/Disease%20information.html">DISEASE INFO</a>
+  </div>
+  <br><br>
+ <div style="color: white; ">
+<div class="navbar1" style="align-self:  center; color: white;padding: 5%;background-color: #175181;">
+    <div class="split left" style="float:left;width: 45%;"> 
+       <img class="gify" src="https://drive.google.com/thumbnail?id=1f5GKcyLi_IBucb45PoH4pTdXJ0Nrkwu5" width="350" height="300" >   
+   
+
+
+</div>
+<div class="split right" style="float:right;width: 55%;">
+     <br>
+    <p style="padding-left: 1%; "><h2>HEALTHY FOOD</h2></p>
+        <p style="padding-left: 1%; ">“EAT HEALTHY STAY HEALTHY!!!”</p><br><br><br><br>
+</div>
+</div>    
+<br>
+<div class="reveal2"style="color: white;background-color: #175181; padding: 5%;"><br><br>
+  <h2 class="reveal"><b>HEALTHY FOODS:</b></h2>
+<ul>
+<li class="reveal"><h3 class="reveal">Vegetables</h3>*Vegetables are a rich source of f olate, a B vitamin that helps your body make new red blood cells.
+<br>* Folate is especially important for children's health and may also reduce the risk of cancer and depression.</li>
+<li class="reveal1"><h3 class="reveal1">legumes</h3>*Legumes are a crucial source of a variety of phytochemicals that are important for human health.
+<br>* These include protein, low GI (glycaemic index) carbohydrate, fibre, minerals, vitamins, carotenoids and polyphenols56.</li>
+<li class="reveal"><h3 class="reveal">Beans</h3>*Beans are high in protein, complex carbohydrates, folate, and iron.
+<br>* Beans also have significant amounts of fiber and soluble fiber, with one cup of cooked beans providing between nine and 13 grams of fiber.
+<br>* Soluble fiber can help lower blood cholesterol.</li>
+<li class="reveal1"><h3 class="reveal1">Fruits</h3>*Fruits are an excellent source of essential vitamins and minerals, and they are high in fiber. 
+<br>* Fruits also provide a wide range of health-boosting antioxidants, including flavonoids. 
+<br>* Eating a diet high in fruits and vegetables can reduce a person's risk of developing heart disease, cancer, inflammation, and diabetes.</li>
+<li class="reveal"><h3 class="reveal">Lean meat</h3>*Lean meats are meats with a relatively low fat content. 
+<br>* Skinless chicken and turkey and red meat, such as pork chops, with the fat trimmed off are examples of lean meat. 
+<br>* The fat on a pork chop accounts for about two thirds of its fat content and the skin on chicken can account for 80 per cent of its fat content.</li>
+<li class="reveal1"><h3 class="reveal1">Fish</h3>*Fish is a low-fat high quality protein. 
+<br>* Fish is filled with omega-3 fatty acids and vitamins such as D and B2 (riboflavin). 
+<br>* Fish is rich in calcium and phosphorus and a great source of minerals, such as iron, zinc, iodine, magnesium, and potassium.</li>
+<li class="reveal"><h3 class="reveal">Egg</h3>-Vitamin A: 6% of the RDA.
+<br>* Folate: 5% of the RDA.
+<br>* Vitamin B5: 7% of the RDA.
+<br>* Vitamin B12: 9% of the RDA.
+<br>* Vitamin B2: 15% of the RDA.
+<br>* Phosphorus: 9% of the RDA.
+<br>* Selenium: 22% of the RDA.
+<br>* Eggs also contain decent amounts of vitamin D, vitamin E, vitamin K, vitamin B6, calcium and zinc.</li>
+<li class="reveal1"><h3 class="reveal1">Tofu</h3>*Tofu is a good source of protein and contains all nine essential amino acids.
+<br>*  It is also a valuable plant source of iron and calcium and the minerals manganese and phosphorous. 
+<br>* In addition to this, it also contains magnesium, copper, zinc and vitamin B1.</li>
+<li class="reveal"><h3 class="reveal">Nuts</h3> *nuts are good sources of fat, fiber and protein. 
+<br>* Most of the fat in nuts is monounsaturated fat, as well as omega-6 and omega-3 polyunsaturated fat. 
+<br>* However, they do contain some saturated fat. Nuts also pack a number of vitamins and minerals, including magnesium and vitamin E.</li>
+    <li class="reveal1"><h3 class="reveal1">Seeds</h3>*Most seeds are rich in protein, healthy fats, fibre, minerals such as magnesium, potassium, calcium, plant iron and zinc, and contain vitamins B1,B2, B3 and vitamin E. 
+<br>* Oily seeds also contain antioxidants that stop the fats from going rancid too quickly.</li>
+<li class="reveal"><h3 class="reveal">Grains</h3>*Grains are important sources of many nutrients, including fiber, B vitamins (thiamin, riboflavin, niacin and folate) and minerals (iron, magnesium and selenium).
+<br>*  People who eat whole grains as part of a healthy diet have a reduced risk of some chronic diseases.</li>
+<li class="reveal1"><h3 class="reveal1">Cereals</h3>*Cereals are staple foods, and are important sources of nutrients in both developed and developing countries.
+<br>*  Cereals and cereal products are an important source of energy, carbohydrate, protein and fibre, as well as containing a range of micronutrients such as vitamin E, some of the B vitamins, magnesium and zinc.</li>
+<li class="reveal"><h3 class="reveal">Wholegrain</h3>*Whole grains are packed with nutrients including protein, fiber, B vitamins, antioxidants, and trace minerals (iron, zinc, copper, and magnesium).
+<br>*  A diet rich in whole grains has been shown to reduce the risk of heart disease, type 2 diabetes, obesity, and some forms of cancer.</li>
+<li class="reveal1"><h3 class="reveal1">Milk</h3>*Milk is a nutrient-rich beverage that may benefit your health in several ways. 
+<br>* It's packed with important nutrients like calcium, phosphorus, B vitamins, potassium .</li>
+<li class="reveal"><h3 class="reveal">Yogurt</h3>*It's Rich in Important Nutrients.
+<br>*  Yogurt contains some of nearly every nutrient that your body needs. ...
+<br>*It's High in Protein. ...
+<br>*Some Varieties May Benefit Digestive Health. ...
+<br>*It May Strengthen Your Immune System. ...
+<br>*It May Protect Against Osteoporosis. ...
+<br>*It May Benefit Heart Health. ...
+    <br>*It May Promote Weight Management.</li></ul><br><br></div>
+<br><br>
+   <!--CONTACT AND LINKS SECTION-->
+  <div  id="contact" style="background-image: url('https://image.freepik.com/free-photo/shades-blue-white-background_23-2147746645.jpg');background-color: rgba(0,0,0, 0.59);background-blend-mode: darken;color: white;font-size:auto;"><br>
+    <table style="width: auto;padding-left: 5%;vertical-align: top;width:100%;">
+      <tr>  
+        <td >
+          <p >Contact<br>Mobile:1234567891<br>Email:abcd123@gmail.com</p>
+          <p >Follow us on</p><img src="https://www.beachrealtync.com/sites/default/files/uploads/socials_3.png" width=100px  ><br><br>
+        </td>
+        <td>
+          <p style="margin:0%;">USEFUL LINKS</p>
+          <hr style="color: white;width: 50%;float: left;margin:0%;">
+          <ul style="text-decoration:none;text-decoration-style: none;">
+            <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/HealthyTips.html" style="text-decoration:none;color: white;">diet plan</a></li>
+            <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/food1-1.html" style="text-decoration:none;color: white;">food tips</a></li>
+            <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/Disease%20information.html" style="text-decoration:none;color: white;">know about disease</a></li>
+            <li><a href="https://kruphacm.github.io/health-improviser-and-monitoring-system/Hospital.html" style="text-decoration:none;color: white;">famous hospital</a></li>
+          </ul>  
+        </td>
+        <td>
+          <p style="margin:0%;">OFFICIAL WEBSITES</p>
+          <hr style="color: white;width: 50%;float: left;margin:0%;">
+          <ul style="text-decoration:none;text-decoration-style: none;">
+            <li><a href="https://medlineplus.gov/encyclopedia.html" style="text-decoration:none;color: white;">DISEASE ENCYCLOPEDIA</a></li>
+            <li><a href="https://www.nal.usda.gov/legacy/fnic/food-dictionaries-and-encyclopedias" style="text-decoration:none;color: white;">FOOD ENCYCLOPEDIA</a></li>
+          </ul> 
+          <br><br> 
+        </td>
+      </tr>      
+      </table>
+      <br>
+  </div>
+  <!--OWNERS RIGHT-->
+  <div style="padding:0.2%;background-color:white;font-size: 100%; ">
+    <p style="text-align: center;color: #507cbe">managed by admins of this website</p>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
